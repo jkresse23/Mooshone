@@ -1,0 +1,19 @@
+<ion-view view-title="Moosh Boosh">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/businesses">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+    </ion-content>
+    <!--this is the ui-view reference to the tabs I've now included as a sub-view of the relevant states-->
+    <ion-footer-bar ui-view="bottomNav">
+    </ion-footer-bar>
+</ion-view>
+</body>
